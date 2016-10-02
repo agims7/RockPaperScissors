@@ -4,6 +4,7 @@ var newGameBtn = document.getElementById('js-newGameButton');
 var newGameElem = document.getElementById('js-newGameElement');
 var pickElem = document.getElementById('js-playerPickElement');
 var resultsElem = document.getElementById('js-resultsTableElement');
+var headElement = document.getElementById('js-headElement');
 
 var pickRock = document.getElementById('js-playerPick_rock');
 var pickPaper = document.getElementById('js-playerPick_paper');
@@ -35,6 +36,7 @@ function setGameElements() {
         newGameElem.style.display = 'none';
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
+        headElement.style.display = 'none';
       break;
     case 'ended':
         newGameBtn.innerText = 'Jeszcze raz';
@@ -81,14 +83,18 @@ function checkRoundWinner(playerPick, computerPick) {
   if (playerPick == computerPick) {
     winnerIs = "Remis!";
     playerResultElem.innerHTML = winnerIs;
+    playerResultElem.style.color = 'red';
     computerResultElem.innerHTML = winnerIs;
+    computerResultElem.style.color = 'red';
   }
 	else if ((computerPick == 'rock' &&  playerPick == 'scissors') ||
         (computerPick == 'scissors' &&  playerPick == 'paper') ||
         (computerPick == 'paper' &&  playerPick == 'rock')) {
+    computerResultElem.style.color = 'red';
   	return setWinner(computer, computerResultElem);
   }
   else {
+    playerResultElem.style.color = 'red';
 		return setWinner(player, playerResultElem);  	
   }
 }
