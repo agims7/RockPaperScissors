@@ -71,32 +71,30 @@ function updateGameState() {
 
 function setWinner(winner, winnersElement) {
 	winnersElement.innerHTML = 'Wygrana';
+  winnersElement.style.color = 'red';
 	winner.score++;
 	setGamePoints();
 }
 
+function setDraw() {
+  playerResultElem.innerHTML = computerResultElem.innerHTML = 'Remis';
+  playerResultElem.style.color = computerResultElem.style.color = 'red';
+}
+
 function checkRoundWinner(playerPick, computerPick) {
   playerResultElem.innerHTML = computerResultElem.innerHTML = '';
-  
-  var winnerIs = '';
 
-  if (playerPick == computerPick) {
-    winnerIs = "Remis!";
-    playerResultElem.innerHTML = winnerIs;
-    playerResultElem.style.color = 'red';
-    computerResultElem.innerHTML = winnerIs;
-    computerResultElem.style.color = 'red';
-  }
-	else if ((computerPick == 'rock' &&  playerPick == 'scissors') ||
+  if ((computerPick == 'rock' &&  playerPick == 'scissors') ||
         (computerPick == 'scissors' &&  playerPick == 'paper') ||
         (computerPick == 'paper' &&  playerPick == 'rock')) {
-    computerResultElem.style.color = 'red';
   	return setWinner(computer, computerResultElem);
   }
-  else {
-    playerResultElem.style.color = 'red';
+  if ((playerPick == 'rock' &&  computerPick == 'scissors') ||
+        (playerPick == 'scissors' &&  computerPick == 'paper') ||
+        (playerPick == 'paper' &&  computerPick == 'rock')) {
 		return setWinner(player, playerResultElem);  	
   }
+  setDraw()
 }
 
 function playerPick(playerPick) {
