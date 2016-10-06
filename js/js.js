@@ -1,5 +1,4 @@
 //---------------VARIABLES---------------//
-
 var newGameBtn = document.getElementById('js-newGameButton');
 var newGameElem = document.getElementById('js-newGameElement');
 var pickElem = document.getElementById('js-playerPickElement');
