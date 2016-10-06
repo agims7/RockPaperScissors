@@ -8,47 +8,47 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
-      <h3 class="text-center">
+    <div id="js-headElement" class="container head-box">
+      <h3 class="head-text text-center">
         Witaj w grze
         <span class="label label-default">Kamień</span>
-        <span class="label label-info">Papier</span>
-        <span class="label label-danger">Nożyce</span>
+        <span class="label label-default">Papier</span>
+        <span class="label label-default">Nożyce</span>
       </h3>
     </div>
 
-    <div id="js-newGameElement" class="container">
+    <div id="js-newGameElement" class="container button-box">
       <div class="row text-center">
-        <button  id="js-newGameButton" class="btn btn-default">
+        <button  id="js-newGameButton" class="btn btn-default button-text">
           Nowa Gra
         </button>
       </div>
     </div>
 
-    <div id="js-playerPickElement" class="container">
+    <div id="js-playerPickElement" class="container buttons-box">
       <div class="row text-center">
-        <button id="js-playerPick_rock"  class="btn">
+        <button id="js-playerPick_rock"  class="btn buttons-box-option">
           <span class="badge">
           <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
           </span>
-          Kamien
+          <span class="buttons-box-span">Kamien</span>
         </button>
-        <button id="js-playerPick_paper"  class="btn">
+        <button id="js-playerPick_paper"  class="btn buttons-box-option">
           <span class="badge">
           <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
           </span>
-          Papier
+          <span class="buttons-box-span">Papier</span>
         </button>
-        <button id="js-playerPick_scissors"  class="btn">
+        <button id="js-playerPick_scissors"  class="btn buttons-box-option">
           <span class="badge">
           <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
           </span>
-          Nożyce
+          <span class="buttons-box-span">Nożyce</span>
         </button>
       </div>
     </div>
 
-    <div id="js-resultsTableElement" class="container">
+    <div id="js-resultsTableElement" class="container game-box">
       <div class="row">
         <div class="col-xs-5 text-center">
           <span id="js-playerPoints" class="badge">
@@ -84,13 +84,13 @@
       <div class="row">
         <div class="col-xs-5 text-center">
           <span id="js-playerResult">
-            Wynik gracza
+            Wynik gracza: 0
           </span>
         </div>
         <div class="col-xs-2"></div>
         <div class="col-xs-5 text-center">
           <span id="js-computerResult">
-            Wynik komputera
+            Wynik komputera: 0
           </span>
         </div>
       </div>
@@ -98,4 +98,4 @@
 
   <script type="text/javascript" src="js/js.js"></script>
   </body>
-</html
+</html>
