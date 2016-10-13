@@ -10,25 +10,20 @@ body {
   background: linear-gradient(to left, #C9FFBF, #FFAFBD); }
 
 .head-box {
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%); }
+  margin: 80px auto; }
 
 .head-text {
   font-family: "Playfair Display", serif;
   font-size: 60px;
   font-weight: bold;
-  color: white; }
+  color: white;
+  margin: 25px 0; }
 
 .label-default {
   background-color: #C2C2C2; }
 
 .button-box {
-  position: absolute;
-  top: 290px;
-  left: 50%;
-  transform: translateX(-50%); }
+  margin: 50px auto; }
 
 .button-text {
   font-family: "Fauna One", serif;
