@@ -1,34 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 body {
   position: relative;
-  background: #C9FFBF;
-  background: -webkit-linear-gradient(to left, #C9FFBF, #FFAFBD);
-  background: linear-gradient(to left, #C9FFBF, #FFAFBD); }
+  background: #EFEFBB;
+  background: -webkit-linear-gradient(to left, #EFEFBB, #D4D3DD);
+  background: linear-gradient(to left, #EFEFBB, #D4D3DD); }
 
 .head-box {
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%); }
+  margin: 80px auto; }
 
 .head-text {
   font-family: "Playfair Display", serif;
   font-size: 60px;
   font-weight: bold;
-  color: white; }
+  color: white;
+  margin: 25px 0; }
 
 .label-default {
   background-color: #C2C2C2; }
 
 .button-box {
-  position: absolute;
-  top: 290px;
-  left: 50%;
-  transform: translateX(-50%); }
+  margin: 50px auto; }
 
 .button-text {
   font-family: "Fauna One", serif;

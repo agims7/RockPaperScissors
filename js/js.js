@@ -30,26 +30,26 @@ var gameState = 'notStarted',  //started // ended
 //---------------FUNCTIONS---------------//
 
 function setGameElements() {
-  switch(gameState) {
-    case 'started':
-        newGameElem.style.display = 'none';
-        pickElem.style.display = 'block';
-        resultsElem.style.display = 'block';
-        headElement.style.display = 'none';
-      break;
-    case 'ended':
-        newGameBtn.innerText = 'Jeszcze raz';
-    case 'notStarted':
-    default:
-        newGameElem.style.display = 'block';
-        pickElem.style.display = 'none';
-        resultsElem.style.display = 'none';
-  }
+    switch (gameState) {
+        case 'started':
+            newGameElem.style.display = 'none';
+            pickElem.style.display = 'block';
+            resultsElem.style.display = 'block';
+            headElement.style.display = 'none';
+            break;
+        case 'ended':
+            newGameBtn.innerText = 'One more time?';
+        case 'notStarted':
+        default:
+            newGameElem.style.display = 'block';
+            pickElem.style.display = 'none';
+            resultsElem.style.display = 'none';
+    }
 }
 
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
-    return possiblePicks[Math.floor(Math.random()*3)];
+    return possiblePicks[Math.floor(Math.random() * 3)];
 }
 
 function setGamePoints() {
@@ -59,24 +59,24 @@ function setGamePoints() {
 
 function updateGameState() {
 	if (player.score === 10) {
-		alert('10 punktów zdobyte! Wygrał gracz: ' + player.name);
+		alert('10 points! The winner is: ' + player.name);
 		gameState = 'ended';
 	}
 	else if (computer.score === 10) {
-		alert('10 punktów zdobyte! Wygrał komputer');	
+		alert('10 points! The winner is: Computer');	
 		gameState = 'ended';
 	}
 }
 
 function setWinner(winner, winnersElement) {
-	winnersElement.innerHTML = 'Wygrana';
+	winnersElement.innerHTML = 'Winner';
   winnersElement.style.color = 'red';
 	winner.score++;
 	setGamePoints();
 }
 
 function setDraw() {
-  playerResultElem.innerHTML = computerResultElem.innerHTML = 'Remis';
+  playerResultElem.innerHTML = computerResultElem.innerHTML = 'Draw';
   playerResultElem.style.color = computerResultElem.style.color = 'red';
 }
 
@@ -108,7 +108,7 @@ function playerPick(playerPick) {
 }
 
 function newGame() {
-  player.name = prompt('Graczu, wpisz swoje imię', 'imię gracza');
+  player.name = prompt('Player, please write your name here', 'Player name');
   if (player.name) {
     player.score = computer.score = 0;
     gameState = 'started';

@@ -6,20 +6,18 @@ $second-font: 'Fauna One', serif;
 
 * {
 	box-sizing: border-box;
+	outline: none;
 }
 
 body {
 	position: relative;
-	background: #C9FFBF;
-	background: -webkit-linear-gradient(to left, #C9FFBF , #FFAFBD);
-	background: linear-gradient(to left, #C9FFBF , #FFAFBD);
+	background: #EFEFBB;
+	background: -webkit-linear-gradient(to left, #EFEFBB , #D4D3DD);
+	background: linear-gradient(to left, #EFEFBB , #D4D3DD);      
 }
 
 .head-box {
-	position: absolute;
-	top: 150px;
-	left: 50%;
-	transform: translateX(-50%);
+	margin: 80px auto;
 }
 
 .head-text {
@@ -27,6 +25,7 @@ body {
 	font-size: 60px;
 	font-weight: bold;
 	color: white;
+	margin: 25px 0;
 }
 
 .label-default {
@@ -34,10 +33,7 @@ body {
 }
 
 .button-box {
-	position: absolute;
-	top: 290px;
-	left: 50%;
-	transform: translateX(-50%);	
+	margin: 50px auto;	
 }
 
 .button-text {
